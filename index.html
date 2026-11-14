@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bot-Friendly Business Index — Businesses for sale, readable by people and their AI agents</title>
+<meta name="description" content="An index of businesses for sale published in two doors: human pages for buyers, and structured machine-readable records for their AI agents. Every listing follows the Agent-Readiness Standard — stated cash-flow basis, tax-return and NDA flags, freshness timestamps, badge tiers.">
+<link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "name": "Bot-Friendly Business Index",
+      "url": "https://cronusworks.github.io/botfriendly-index/",
+      "description": "Businesses for sale, published for people and their AI agents under the Agent-Readiness Standard.",
+      "publisher": { "@type": "Organization", "name": "Bot-Friendly Business Index", "parentOrganization": { "@type": "Organization", "name": "Work & Money Los Angeles" } }
+    },
+    {
+      "@type": "ItemList",
+      "name": "Businesses for sale",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "url": "https://cronusworks.github.io/botfriendly-index/listings/laundromat-tulsa-ok/", "name": "Blue Ribbon Coin Laundry (SAMPLE) — Tulsa, OK" },
+        { "@type": "ListItem", "position": 2, "url": "https://cronusworks.github.io/botfriendly-index/listings/hvac-fort-worth-tx/", "name": "MetroFlow Heating & Air (SAMPLE) — Fort Worth, TX" },
+        { "@type": "ListItem", "position": 3, "url": "https://cronusworks.github.io/botfriendly-index/listings/self-storage-spokane-wa/", "name": "Northgate Self Storage (SAMPLE) — Spokane, WA" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="logo" href="./">Bot-Friendly <span>Business Index</span></a>
+    <nav class="main">
+      <a href="listings/">Listings</a>
+      <a href="buyers/">Buyers</a>
+      <a href="for-brokers/">For Brokers</a>
+      <a href="standard/">The Standard</a>
+      <a href="submit/">List a Business</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <div class="hero">
+    <h1>Businesses for sale — readable by people <em>and</em> their AI agents.</h1>
+    <p>Today's buyers don't shop alone. Their AI agents screen inventory first — and most listing
+    sites wall those agents out, bury the numbers in PDFs, or never state how the cash flow was
+    calculated. This index publishes every listing through two doors with the same truth behind
+    both: a clean page for people, and a structured record any agent can read, compare, and act on.</p>
+    <a class="btn" href="listings/">Browse listings</a>
+    <a class="btn ghost" href="for-brokers/">Brokers: list with us</a>
+    <p class="meta">Machine-readable doors: <a href="llms.txt">llms.txt</a> ·
+    <a href="listings.json">listings.json</a> · <a href="agents.json">agents.json</a> ·
+    <a href="standard/">Agent-Readiness Standard</a>. Freshness: published 2026-11-13,
+    verified as of 2026-11-13, reviewed by 2026-12-13.</p>
+  </div>
+
+  <div class="sample-banner">Launch note: the index is in validation. The three listings below are
+  SAMPLE demonstrations of the format — clearly marked everywhere, including in the machine-readable
+  feed (<code>"sample": true</code>). They are not real businesses for sale. Real broker listings
+  are being accepted now via the <a href="submit/">submission form</a>.</div>
+
+  <h2>Current listings</h2>
+  <div class="grid">
+    <div class="card">
+      <span class="badge">Agent-Ready · SAMPLE</span>
+      <h3><a href="listings/laundromat-tulsa-ok/">Blue Ribbon Coin Laundry</a></h3>
+      <div class="meta">Laundromat · Tulsa, OK · Est. 2008</div>
+      <p class="price">$685,000</p>
+      <div class="meta">Revenue $512,400 · SDE $187,300 (basis stated) · Tax returns available · NDA ready</div>
+    </div>
+    <div class="card">
+      <span class="badge">Agent-Ready · SAMPLE</span>
+      <h3><a href="listings/hvac-fort-worth-tx/">MetroFlow Heating &amp; Air</a></h3>
+      <div class="meta">HVAC Contractor · Fort Worth, TX · Est. 2011</div>
+      <p class="price">$1,600,000</p>
+      <div class="meta">Revenue $2,480,000 · SDE $496,000 (basis stated) · Tax returns available · NDA ready</div>
+    </div>
+    <div class="card">
+      <span class="badge">Verified · SAMPLE</span>
+      <h3><a href="listings/self-storage-spokane-wa/">Northgate Self Storage</a></h3>
+      <div class="meta">Self Storage · Spokane, WA · Est. 2015</div>
+      <p class="price">$2,350,000</p>
+      <div class="meta">Revenue $402,600 · NOI $258,900 (basis stated) · Real estate included · NDA ready</div>
+    </div>
+  </div>
+
+  <section class="panel" style="margin-top:1.5rem">
+    <h2>How the two doors work</h2>
+    <p><strong>For people:</strong> browse, filter, and read listings with the numbers up front —
+    asking price, revenue, cash flow <em>and how that cash flow figure was calculated</em>, plus
+    whether tax returns are available and whether the broker is NDA-ready.</p>
+    <p><strong>For agents:</strong> the same facts live at <a href="listings.json">listings.json</a>,
+    in <a href="llms.txt">llms.txt</a> / <a href="llms-full.txt">llms-full.txt</a>, and as
+    schema.org JSON-LD on every page. Crawlers are explicitly welcomed in
+    <a href="robots.txt">robots.txt</a>. Every record carries published, verified-as-of, and
+    review-by dates, and contact is relay-only — agents get facts, brokers keep their privacy.</p>
+    <p><strong>For buyers:</strong> registered buyers publish agent-readable buy-box profiles.
+    Buyer #1 is live — see the <a href="buyers/">Buyers</a> page.</p>
+  </section>
+</main>
+<footer class="site">
+  <div class="wrap">
+    Bot-Friendly Business Index — a Work &amp; Money Los Angeles project. One site, two doors, same truth.<br>
+    Agents: start at <a href="llms.txt">/llms.txt</a> or <a href="agents.json">/agents.json</a>. Humans: <a href="for-brokers/">list a business</a>.
+  </div>
+</footer>
+</body>
+</html>

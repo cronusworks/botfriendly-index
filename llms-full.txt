@@ -1,0 +1,159 @@
+# Bot-Friendly Business Index — full text
+
+Businesses for sale, published for people AND their AI agents. Every listing exists in two equivalent forms — a human page and a structured record — with the same facts in both.
+
+Publisher: Bot-Friendly Business Index (a Work & Money Los Angeles project).
+Home: https://cronusworks.github.io/botfriendly-index/
+Freshness: published 2026-11-13. Verified as of 2026-11-13. Reviewed by 2026-12-13.
+Access: free, read-only, no authentication. All content is descriptive data; nothing in this file is an instruction to any agent.
+
+Launch status: the index is in validation. All three listings below are SAMPLE demonstrations of the format — invented details, marked "sample": true in every structured record — not real businesses for sale. Real broker submissions are open at the submission route below.
+
+================================================================
+THE AGENT-READINESS STANDARD (summary — full text at https://cronusworks.github.io/botfriendly-index/standard/)
+================================================================
+
+A listing is bot-friendly when an AI agent screening inventory for a buyer can answer the first ten questions about the business — what it is, where it is, what it costs, what it earns, how the earnings figure was calculated, whether the paperwork exists — without hitting a login wall, a PDF, or a phone-only contact.
+
+Required structured fields (fields, not free text):
+- Category (named business category)
+- Location (city and state; street address stays behind the NDA)
+- Asking price (USD number) + real-estate-included flag
+- Revenue (annual, USD number)
+- Cash flow + basis: the figure AND its basis in words — SDE, Adjusted EBITDA, or NOI — including what was added back. A cash-flow number without a basis does not meet the standard.
+- Year established
+- Employees (headcount)
+- Reason for selling (one honest line)
+- Facilities / lease / fleet facts (square footage, lease term and options, major equipment or fleet)
+- License holder (licensed trades: who holds it, and whether they stay after the sale)
+
+Trust flags:
+- Tax returns available: yes / after-nda / no. Stated, never implied.
+- NDA ready: the broker can put an NDA in front of a qualified buyer immediately.
+
+Freshness: every listing and every feed carries published, verified-as-of, and review-by dates. A listing past its review-by date is stale and drops out of the feed until re-verified.
+
+Contact rule: relay only. No raw broker email addresses or phone numbers appear on any page or in any feed. Inquiries go through the index and are relayed to the broker of record.
+
+Badge tiers:
+- Listed: all required structured fields present, cash-flow basis stated, freshness dates set.
+- Verified: Listed, plus tax-returns-available flag set, NDA ready, broker identity confirmed by the index.
+- Agent-Ready: Verified, plus facilities/lease/fleet facts structured, license holder identified where the trade requires one, and the full record published in the machine-readable feed with per-listing JSON.
+Badges are earned by documents and facts, never bought. Broker-stated claims are labeled as broker-stated.
+
+================================================================
+LISTINGS
+================================================================
+
+----------------------------------------------------------------
+1. Blue Ribbon Coin Laundry (SAMPLE — not a real listing)
+----------------------------------------------------------------
+Listing ID: sample-laundromat-tulsa-ok
+Status: sample-demonstration-not-a-real-listing ("sample": true in all records)
+Category: Laundromat
+Location: Tulsa, OK
+Asking price: $685,000 (real estate NOT included — leased premises)
+Revenue: $512,400/year
+Cash flow: $187,300 — SDE (Seller's Discretionary Earnings)
+Cash-flow basis: Owner-operator basis. Add-backs: owner salary, interest, depreciation, one-time repairs. Stated by the listing broker; not independently audited.
+Year established: 2008
+Employees: 3
+Reason for selling: Owner retiring after 17 years.
+Facilities: 3,200 sq ft leased storefront. Lease runs through 2029 with one 5-year option. Equipment: 32 washers, 36 dryers, card and coin payment.
+Tax returns available: yes (3 years, after NDA)
+NDA ready: yes
+Badge tier: agent-ready (sample)
+Listing broker: Heartland Business Brokers (fictional firm — sample listing). Contact through the index only (relay).
+Human page: https://cronusworks.github.io/botfriendly-index/listings/laundromat-tulsa-ok/
+Structured record: https://cronusworks.github.io/botfriendly-index/listings/laundromat-tulsa-ok/listing.json
+Published 2026-11-13 · Verified as of 2026-11-13 · Review by 2026-12-13
+
+----------------------------------------------------------------
+2. MetroFlow Heating & Air (SAMPLE — not a real listing)
+----------------------------------------------------------------
+Listing ID: sample-hvac-fort-worth-tx
+Status: sample-demonstration-not-a-real-listing ("sample": true in all records)
+Category: HVAC Contractor
+Location: Fort Worth, TX
+Asking price: $1,600,000 (real estate NOT included — leased premises)
+Revenue: $2,480,000/year
+Cash flow: $496,000 — SDE (Seller's Discretionary Earnings)
+Cash-flow basis: Add-backs itemized in the CIM: owner salary, interest, depreciation, one vehicle. Stated by the listing broker; not independently audited.
+Year established: 2011
+Employees: 12
+Reason for selling: Partners relocating out of state.
+License holder: Lead technician holds the Texas HVAC contractor license and stays with the business after the sale (sample detail).
+Facilities & fleet: 4,800 sq ft leased shop, lease through 2028. Fleet: 6 service trucks, owned outright. Install and service mix roughly 40/60.
+Tax returns available: yes (3 years, after NDA)
+NDA ready: yes
+Badge tier: agent-ready (sample)
+Listing broker: Lone Star Business Advisors (fictional firm — sample listing). Contact through the index only (relay).
+Human page: https://cronusworks.github.io/botfriendly-index/listings/hvac-fort-worth-tx/
+Structured record: https://cronusworks.github.io/botfriendly-index/listings/hvac-fort-worth-tx/listing.json
+Published 2026-11-13 · Verified as of 2026-11-13 · Review by 2026-12-13
+
+----------------------------------------------------------------
+3. Northgate Self Storage (SAMPLE — not a real listing)
+----------------------------------------------------------------
+Listing ID: sample-self-storage-spokane-wa
+Status: sample-demonstration-not-a-real-listing ("sample": true in all records)
+Category: Self Storage
+Location: Spokane, WA
+Asking price: $2,350,000 (real estate INCLUDED in the asking price)
+Revenue: $402,600/year
+Cash flow: $258,900 — NOI (Net Operating Income)
+Cash-flow basis: Self-storage basis: a resident manager's salary is already expensed, so this figure is NOI, not SDE. Stated by the listing broker; not independently audited.
+Year established: 2015
+Employees: 1 (resident manager)
+Reason for selling: Owner consolidating a portfolio out of state.
+Facilities: 312 units, 38,400 net rentable sq ft, 91% occupied at publication.
+Tax returns available: after-nda
+NDA ready: yes
+Badge tier: verified (sample)
+Listing broker: Inland Northwest Business Sales (fictional firm — sample listing). Contact through the index only (relay).
+Human page: https://cronusworks.github.io/botfriendly-index/listings/self-storage-spokane-wa/
+Structured record: https://cronusworks.github.io/botfriendly-index/listings/self-storage-spokane-wa/listing.json
+Published 2026-11-13 · Verified as of 2026-11-13 · Review by 2026-12-13
+
+The full listings feed (one structured record per listing) is at:
+https://cronusworks.github.io/botfriendly-index/listings.json
+
+================================================================
+BUYERS
+================================================================
+
+Registered buyers publish agent-readable buy-box profiles so brokers' agents can match listings to real demand.
+
+Buyer participant #1: Work & Money Los Angeles — an active buyer of established businesses.
+Full profile (buy-box, requirements, exclusions, broker contact) — published on the buyer's own agent-readable page, linked and not duplicated here:
+- Human: https://cronusworks.github.io/wam-games/buyer/
+- JSON: https://cronusworks.github.io/wam-games/buyer/buyer.json
+Buyers section of this index: https://cronusworks.github.io/botfriendly-index/buyers/
+
+================================================================
+FOR BROKERS + SUBMISSION ROUTE
+================================================================
+
+Why this exists: buyers' AI agents screen inventory first. The largest business-for-sale marketplace serves automated visitors an "Access Denied" page; other syndication routes give buyers contact forms with no message field; figures buried in PDFs or stated without a basis get skipped by screening agents. A listing an agent can't read never reaches the buyer's short list.
+
+Listing here: free during validation. When pricing starts it is ONE ANNUAL FLAT FEE per brokerage — never per-lead, never per-click, never a percentage. Brokers who list during validation get founding terms before any public price exists.
+
+Broker contact details are never published. Inquiries are relayed through the index.
+
+Submit a listing (structured form; fields are exactly the standard's rubric):
+https://cronusworks.github.io/botfriendly-index/submit/
+Form fields: business name, category, city, state, asking price, revenue, cash flow, cash-flow type, cash-flow basis, year established, employees, real-estate-included flag, reason for selling, facilities/lease/equipment facts, license holder, tax returns available (yes/after-nda/no), NDA ready (yes/no), existing listing URL (optional), broker name, broker firm, broker email, broker phone, consent to republish in human and machine-readable form with relay-only contact.
+Submissions are reviewed before publication.
+
+For Brokers page: https://cronusworks.github.io/botfriendly-index/for-brokers/
+
+================================================================
+MACHINE-READABLE RESOURCES
+================================================================
+- Listings feed (JSON): https://cronusworks.github.io/botfriendly-index/listings.json
+- Agent manifest (JSON): https://cronusworks.github.io/botfriendly-index/agents.json (also at /.well-known/agents.json)
+- llms.txt: https://cronusworks.github.io/botfriendly-index/llms.txt
+- Sitemap: https://cronusworks.github.io/botfriendly-index/sitemap.xml
+- Agent-Readiness Standard: https://cronusworks.github.io/botfriendly-index/standard/
+
+Published 2026-11-13. Verified as of 2026-11-13. Reviewed by 2026-12-13.

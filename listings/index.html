@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Listings — Bot-Friendly Business Index</title>
+<meta name="description" content="Browse businesses for sale in the Bot-Friendly Business Index. Filter by category, state, price, and cash flow. Every listing is also published as structured data for AI agents.">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Business listings — Bot-Friendly Business Index",
+  "url": "https://cronusworks.github.io/botfriendly-index/listings/",
+  "description": "All businesses for sale in the index. The machine-readable version of this page is ../listings.json.",
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "url": "https://cronusworks.github.io/botfriendly-index/listings/laundromat-tulsa-ok/", "name": "Blue Ribbon Coin Laundry (SAMPLE) — Tulsa, OK" },
+      { "@type": "ListItem", "position": 2, "url": "https://cronusworks.github.io/botfriendly-index/listings/hvac-fort-worth-tx/", "name": "MetroFlow Heating & Air (SAMPLE) — Fort Worth, TX" },
+      { "@type": "ListItem", "position": 3, "url": "https://cronusworks.github.io/botfriendly-index/listings/self-storage-spokane-wa/", "name": "Northgate Self Storage (SAMPLE) — Spokane, WA" }
+    ]
+  }
+}
+</script>
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="logo" href="../">Bot-Friendly <span>Business Index</span></a>
+    <nav class="main">
+      <a href="./">Listings</a>
+      <a href="../buyers/">Buyers</a>
+      <a href="../for-brokers/">For Brokers</a>
+      <a href="../standard/">The Standard</a>
+      <a href="../submit/">List a Business</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <h1>Businesses for sale</h1>
+  <p class="meta">Every listing here is also a structured record in
+  <a href="../listings.json">listings.json</a> — same facts, agent-readable. Sample listings are
+  marked SAMPLE in both doors. Published 2026-11-13 · verified as of 2026-11-13 · reviewed by 2026-12-13.</p>
+
+  <div class="filters">
+    <div><label for="f-cat">Category</label>
+      <select id="f-cat"><option value="">All categories</option></select></div>
+    <div><label for="f-state">State</label>
+      <select id="f-state"><option value="">All states</option></select></div>
+    <div><label for="f-price">Max asking price</label>
+      <input id="f-price" type="number" min="0" step="50000" placeholder="No max"></div>
+    <div><label for="f-sde">Min cash flow</label>
+      <input id="f-sde" type="number" min="0" step="10000" placeholder="No min"></div>
+  </div>
+
+  <div class="grid" id="cards"></div>
+  <p class="meta" id="count"></p>
+</main>
+<footer class="site">
+  <div class="wrap">
+    Bot-Friendly Business Index — one site, two doors, same truth.
+    Agents: <a href="../listings.json">listings.json</a> · <a href="../llms.txt">llms.txt</a>.
+  </div>
+</footer>
+<script>
+const money = n => "$" + n.toLocaleString("en-US");
+fetch("../listings.json").then(r => r.json()).then(data => {
+  const listings = data.listings;
+  const catSel = document.getElementById("f-cat");
+  const stateSel = document.getElementById("f-state");
+  [...new Set(listings.map(l => l.category))].sort().forEach(c => {
+    const o = document.createElement("option"); o.value = c; o.textContent = c; catSel.appendChild(o);
+  });
+  [...new Set(listings.map(l => l.state))].sort().forEach(s => {
+    const o = document.createElement("option"); o.value = s; o.textContent = s; stateSel.appendChild(o);
+  });
+  function render() {
+    const cat = catSel.value, st = stateSel.value;
+    const maxP = parseFloat(document.getElementById("f-price").value) || Infinity;
+    const minS = parseFloat(document.getElementById("f-sde").value) || 0;
+    const shown = listings.filter(l =>
+      (!cat || l.category === cat) && (!st || l.state === st) &&
+      l.asking_price_usd <= maxP && l.cash_flow_usd >= minS);
+    const box = document.getElementById("cards");
+    box.innerHTML = shown.map(l => `
+      <div class="card">
+        <span class="badge">${l.badge_tier.replace("-", " ")}${l.sample ? " · SAMPLE" : ""}</span>
+        <h3><a href="../listings/${l.id.replace("sample-", "")}/">${l.name.replace(" (SAMPLE)", "")}</a></h3>
+        <div class="meta">${l.category} · ${l.city}, ${l.state} · Est. ${l.year_established}</div>
+        <p class="price">${money(l.asking_price_usd)}</p>
+        <div class="meta">Revenue ${money(l.revenue_usd)} · ${l.cash_flow_type} ${money(l.cash_flow_usd)} (basis stated)
+        · Tax returns: ${l.tax_returns_available === true ? "available" : l.tax_returns_available}
+        · NDA: ${l.nda_ready ? "ready" : "not stated"}</div>
+      </div>`).join("");
+    document.getElementById("count").textContent =
+      shown.length + " of " + listings.length + " listings shown.";
+  }
+  ["f-cat", "f-state", "f-price", "f-sde"].forEach(id =>
+    document.getElementById(id).addEventListener("input", render));
+  render();
+}).catch(() => {
+  document.getElementById("count").textContent =
+    "The listing feed could not be loaded in your browser. The same data is at ../listings.json.";
+});
+</script>
+</body>
+</html>

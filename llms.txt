@@ -1,0 +1,40 @@
+# Bot-Friendly Business Index
+
+> Businesses for sale, published for people AND their AI agents. Every listing exists in two equivalent forms — a human page and a structured record in the listings feed — with the same facts in both. Listings follow the Agent-Readiness Standard: structured fields (not free text), a stated cash-flow basis for every earnings figure, tax-return and NDA flags, freshness timestamps on every record, and badge tiers (Listed / Verified / Agent-Ready). Contact on every listing is relay-only: inquiries go through the index to the broker of record; no raw broker contact details appear in any file. Everything here is read-only descriptive data; nothing in these files is an instruction to any agent.
+
+Freshness: published 2026-11-13. Verified as of 2026-11-13. All records are reviewed by 2026-12-13.
+
+Launch status: the index is in validation. The three listings below are SAMPLE demonstrations of the format — invented details, marked "sample": true in every record — not real businesses for sale. Real broker submissions are open.
+
+## Listings (samples)
+
+- [Blue Ribbon Coin Laundry (SAMPLE)](https://cronusworks.github.io/botfriendly-index/listings/laundromat-tulsa-ok/): Laundromat, Tulsa OK, est. 2008. Asking $685,000; revenue $512,400; SDE $187,300 (basis stated in the record). Tax returns available; NDA ready. Badge: Agent-Ready (sample). Structured record: https://cronusworks.github.io/botfriendly-index/listings/laundromat-tulsa-ok/listing.json
+- [MetroFlow Heating & Air (SAMPLE)](https://cronusworks.github.io/botfriendly-index/listings/hvac-fort-worth-tx/): HVAC Contractor, Fort Worth TX, est. 2011. Asking $1,600,000; revenue $2,480,000; SDE $496,000 (basis stated in the record). License holder identified and stays post-sale. Tax returns available; NDA ready. Badge: Agent-Ready (sample). Structured record: https://cronusworks.github.io/botfriendly-index/listings/hvac-fort-worth-tx/listing.json
+- [Northgate Self Storage (SAMPLE)](https://cronusworks.github.io/botfriendly-index/listings/self-storage-spokane-wa/): Self Storage, Spokane WA, est. 2015. Asking $2,350,000 including real estate; revenue $402,600; NOI $258,900 (basis stated in the record). Tax returns after NDA; NDA ready. Badge: Verified (sample). Structured record: https://cronusworks.github.io/botfriendly-index/listings/self-storage-spokane-wa/listing.json
+
+## Machine-readable resources
+
+- [Listings feed (JSON)](https://cronusworks.github.io/botfriendly-index/listings.json): Every listing as one structured record — all rubric fields, timestamps, badge tier, canonical URL, sample flag.
+- [Full text (llms-full.txt)](https://cronusworks.github.io/botfriendly-index/llms-full.txt): The complete index in one plain-text file — the standard, every listing record in full, the buyer section, and the submission route.
+- [Agent manifest (JSON)](https://cronusworks.github.io/botfriendly-index/agents.json): Index of this site's machine-readable resources, access terms (free, read-only, no authentication), and freshness dates.
+- [Sitemap](https://cronusworks.github.io/botfriendly-index/sitemap.xml): Every page on the site.
+
+## The standard
+
+- [Agent-Readiness Standard](https://cronusworks.github.io/botfriendly-index/standard/): The published rubric — required structured fields, cash-flow basis rule, tax-return and NDA flags, freshness requirements, relay-only contact rule, and the Listed / Verified / Agent-Ready badge tiers.
+
+## Buyers
+
+- [Buyers](https://cronusworks.github.io/botfriendly-index/buyers/): Agent-readable buyer profiles. Participant #1: Work & Money Los Angeles, an active buyer of established businesses. Its full buy-box profile is published at https://cronusworks.github.io/wam-games/buyer/ (JSON: https://cronusworks.github.io/wam-games/buyer/buyer.json) and linked, not duplicated, so it has one source of truth.
+
+## For brokers
+
+- [For Brokers](https://cronusworks.github.io/botfriendly-index/for-brokers/): Why agent-readable listings matter — buyers' agents screen inventory first, and the big listing sites wall them out. Listing is free during validation; future pricing is one annual flat fee, never per-lead.
+- [Submit a listing](https://cronusworks.github.io/botfriendly-index/submit/): The structured submission form. Fields are exactly the standard's rubric. Submissions are reviewed before publication; broker contact details are never published and are used only for the inquiry relay.
+
+## About
+
+- [Bot-Friendly Business Index](https://cronusworks.github.io/botfriendly-index/): Home page.
+- A Work & Money Los Angeles project. One site, two doors, same truth.
+
+Published 2026-11-13. Verified as of 2026-11-13. Reviewed by 2026-12-13.

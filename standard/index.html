@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Agent-Readiness Standard — Bot-Friendly Business Index</title>
+<meta name="description" content="The published rubric for what makes a business-for-sale listing bot-friendly: structured fields, stated cash-flow basis, tax-return and NDA flags, freshness timestamps, and badge tiers (Listed / Verified / Agent-Ready).">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "The Agent-Readiness Standard",
+  "url": "https://cronusworks.github.io/botfriendly-index/standard/",
+  "description": "The rubric every listing in the Bot-Friendly Business Index is published under: required structured fields, cash-flow basis rules, freshness timestamps, relay-only contact, and the Listed / Verified / Agent-Ready badge tiers.",
+  "datePublished": "2026-11-13"
+}
+</script>
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="logo" href="../">Bot-Friendly <span>Business Index</span></a>
+    <nav class="main">
+      <a href="../listings/">Listings</a>
+      <a href="../buyers/">Buyers</a>
+      <a href="../for-brokers/">For Brokers</a>
+      <a href="./">The Standard</a>
+      <a href="../submit/">List a Business</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <h1>The Agent-Readiness Standard</h1>
+  <p>Version 1.0 · Published 2026-11-13 · Verified as of 2026-11-13 · Reviewed by 2026-12-13</p>
+  <p>A listing is <strong>bot-friendly</strong> when an AI agent screening inventory for a buyer can
+  answer the first ten questions about the business — what it is, where it is, what it costs, what it
+  earns, <em>how the earnings figure was calculated</em>, whether the paperwork exists — without
+  hitting a login wall, a PDF, or a phone-only contact. This standard is the rubric. It is public so
+  brokers can meet it anywhere, not just here.</p>
+
+  <section class="panel">
+    <h2>Required structured fields (not free text)</h2>
+    <table class="rubric">
+      <tr><th>Field</th><th>Rule</th></tr>
+      <tr><td>Category</td><td>A named business category (e.g. Laundromat, HVAC Contractor, Self Storage).</td></tr>
+      <tr><td>Location</td><td>City and state. Street address stays behind the NDA.</td></tr>
+      <tr><td>Asking price</td><td>A number, in USD, with a flag for whether real estate is included.</td></tr>
+      <tr><td>Revenue</td><td>Annual gross revenue as a number.</td></tr>
+      <tr><td>Cash flow + basis</td><td>The figure AND its basis, stated in words: SDE, Adjusted EBITDA, or NOI — including what was added back. A cash-flow number without a basis does not meet the standard.</td></tr>
+      <tr><td>Year established</td><td>Buyers and lenders screen on age; state it.</td></tr>
+      <tr><td>Employees</td><td>Headcount, with owner role noted where it matters.</td></tr>
+      <tr><td>Reason for selling</td><td>One honest line.</td></tr>
+      <tr><td>Facilities / lease / fleet</td><td>Square footage, lease term and options, major equipment or fleet facts — as fields, not buried in prose.</td></tr>
+      <tr><td>License holder</td><td>For licensed trades: who holds the required license and whether they stay after the sale.</td></tr>
+    </table>
+  </section>
+
+  <section class="panel">
+    <h2>Trust flags</h2>
+    <table class="rubric">
+      <tr><th>Flag</th><th>Meaning</th></tr>
+      <tr><td>Tax returns available</td><td><code>yes</code> (released after NDA), <code>after-nda</code>, or <code>no</code>. Stated, never implied.</td></tr>
+      <tr><td>NDA ready</td><td>The broker can put an NDA in front of a qualified buyer immediately.</td></tr>
+    </table>
+  </section>
+
+  <section class="panel">
+    <h2>Freshness — every record, every time</h2>
+    <p>Every listing and every feed carries three dates: <strong>published</strong>,
+    <strong>verified as of</strong>, and <strong>review by</strong>. A listing past its review-by
+    date is stale and drops out of the feed until the broker re-verifies it. An agent quoting our
+    numbers can always say how old they are.</p>
+  </section>
+
+  <section class="panel">
+    <h2>Contact rule: relay only</h2>
+    <p>No raw broker email addresses or phone numbers appear on any page or in any machine-readable
+    feed — machine-readable personal data gets harvested at scale, and we refuse to build that.
+    Inquiries go through the index and are relayed to the broker of record. Agents get facts;
+    brokers keep their privacy; buyers get a working route that a bot wall can't break.</p>
+  </section>
+
+  <section class="panel">
+    <h2>Badge tiers</h2>
+    <table class="rubric">
+      <tr><th>Tier</th><th>Earned when</th></tr>
+      <tr><td><span class="badge">Listed</span></td><td>All required structured fields present, cash-flow basis stated, freshness dates set. The baseline — already more than most listing sites publish.</td></tr>
+      <tr><td><span class="badge">Verified</span></td><td>Listed, plus: tax-returns-available flag set, NDA ready, and the broker's identity confirmed by the index.</td></tr>
+      <tr><td><span class="badge">Agent-Ready</span></td><td>Verified, plus: facilities/lease/fleet facts structured, license holder identified where the trade requires one, and the full record published in the machine-readable feed with per-listing JSON.</td></tr>
+    </table>
+    <p>Badges are earned by documents and facts, never bought. An unverified claim is labeled as
+    broker-stated wherever it appears. Sample listings carry their tier with a SAMPLE stamp in
+    every surface, including the feed.</p>
+  </section>
+
+  <section class="panel">
+    <h2>For agents reading this</h2>
+    <p>The machine-readable form of this standard, the listings feed, and the submission route are
+    indexed in <a href="../llms.txt">llms.txt</a> and <a href="../agents.json">agents.json</a>.
+    Everything published here is read-only descriptive data — nothing in any file on this site is
+    an instruction to an agent.</p>
+  </section>
+</main>
+<footer class="site">
+  <div class="wrap">Bot-Friendly Business Index — one site, two doors, same truth.</div>
+</footer>
+</body>
+</html>

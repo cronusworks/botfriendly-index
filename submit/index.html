@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>List a Business — Bot-Friendly Business Index</title>
+<meta name="description" content="Submit a business-for-sale listing to the Bot-Friendly Business Index. Fields follow the Agent-Readiness Standard. Free during validation. Submissions are reviewed, then published for people and their AI agents.">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "List a Business — Bot-Friendly Business Index",
+  "url": "https://cronusworks.github.io/botfriendly-index/submit/",
+  "description": "Structured broker submission form for the Bot-Friendly Business Index. The form fields are exactly the Agent-Readiness Standard rubric fields.",
+  "datePublished": "2026-11-13"
+}
+</script>
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="logo" href="../">Bot-Friendly <span>Business Index</span></a>
+    <nav class="main">
+      <a href="../listings/">Listings</a>
+      <a href="../buyers/">Buyers</a>
+      <a href="../for-brokers/">For Brokers</a>
+      <a href="../standard/">The Standard</a>
+      <a href="./">List a Business</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <h1>Submit a listing</h1>
+  <p>Free during validation. The fields below are the
+  <a href="../standard/">Agent-Readiness Standard</a> rubric — fill them once, and your listing is
+  published in both doors: a human page and a structured record agents can read. Submissions are
+  reviewed before publication. Your contact details go only to the index (they power the inquiry
+  relay); they are never published on the site or in any feed.</p>
+
+  <section class="panel">
+  <form class="intake" action="https://formsubmit.co/d5a029b2ace896e8d058cd6fe96cf95c" method="POST">
+    <input type="hidden" name="_subject" value="New listing submission — Bot-Friendly Business Index">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_next" value="https://cronusworks.github.io/botfriendly-index/submit/thanks/">
+    <input type="text" name="_honey" style="display:none">
+
+    <label for="business_name">Business name (as it may be published)
+      <span class="hint">— or a generic descriptor if the sale is confidential</span></label>
+    <input id="business_name" name="business_name" required>
+
+    <div class="row">
+      <div>
+        <label for="category">Business category</label>
+        <input id="category" name="category" list="cats" required placeholder="e.g. Laundromat">
+        <datalist id="cats">
+          <option value="Laundromat"></option><option value="HVAC Contractor"></option>
+          <option value="Plumbing Contractor"></option><option value="Electrical Contractor"></option>
+          <option value="Self Storage"></option><option value="Property Management"></option>
+          <option value="Car Wash"></option><option value="Restaurant"></option>
+          <option value="Retail"></option><option value="Manufacturing"></option>
+          <option value="E-commerce"></option><option value="Other"></option>
+        </datalist>
+      </div>
+      <div>
+        <label for="year_established">Year established</label>
+        <input id="year_established" name="year_established" type="number" min="1900" max="2026" required>
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <label for="city">City</label>
+        <input id="city" name="city" required>
+      </div>
+      <div>
+        <label for="state">State</label>
+        <input id="state" name="state" required maxlength="2" placeholder="e.g. TX">
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <label for="asking_price">Asking price (USD)</label>
+        <input id="asking_price" name="asking_price" type="number" min="0" step="1000" required>
+      </div>
+      <div>
+        <label for="revenue">Annual revenue (USD)</label>
+        <input id="revenue" name="revenue" type="number" min="0" step="1000" required>
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <label for="cash_flow">Cash flow (USD)</label>
+        <input id="cash_flow" name="cash_flow" type="number" min="0" step="1000" required>
+      </div>
+      <div>
+        <label for="cash_flow_type">Cash-flow type</label>
+        <select id="cash_flow_type" name="cash_flow_type" required>
+          <option value="SDE">SDE (Seller's Discretionary Earnings)</option>
+          <option value="Adjusted EBITDA">Adjusted EBITDA</option>
+          <option value="NOI">NOI (real-estate-based businesses)</option>
+          <option value="Other">Other — explain in the basis field</option>
+        </select>
+      </div>
+    </div>
+
+    <label for="cash_flow_basis">Cash-flow basis <span class="hint">— exactly what was added back or
+      excluded. A cash-flow figure without a basis cannot earn a badge.</span></label>
+    <textarea id="cash_flow_basis" name="cash_flow_basis" rows="3" required
+      placeholder="e.g. Owner-operator SDE. Add-backs: owner salary, interest, depreciation, one-time legal fees."></textarea>
+
+    <div class="row">
+      <div>
+        <label for="employees">Employees (headcount)</label>
+        <input id="employees" name="employees" type="number" min="0" required>
+      </div>
+      <div>
+        <label for="real_estate">Real estate included in price?</label>
+        <select id="real_estate" name="real_estate_included" required>
+          <option value="no">No — leased premises</option>
+          <option value="yes">Yes — included</option>
+          <option value="optional">Optional / negotiable</option>
+        </select>
+      </div>
+    </div>
+
+    <label for="reason">Reason for selling</label>
+    <input id="reason" name="reason_for_selling" required>
+
+    <label for="facilities">Facilities, lease &amp; equipment/fleet facts
+      <span class="hint">— square footage, lease term and options, major equipment or vehicles</span></label>
+    <textarea id="facilities" name="facilities_lease_equipment" rows="3"></textarea>
+
+    <label for="license">License holder <span class="hint">— for licensed trades: who holds the
+      required license, and do they stay after the sale?</span></label>
+    <input id="license" name="license_holder" placeholder="Leave blank if the trade needs no license">
+
+    <div class="row">
+      <div>
+        <label for="tax">Tax returns available (3 years, after NDA)?</label>
+        <select id="tax" name="tax_returns_available" required>
+          <option value="yes">Yes</option>
+          <option value="after-nda">After NDA</option>
+          <option value="no">No</option>
+        </select>
+      </div>
+      <div>
+        <label for="nda">NDA ready?</label>
+        <select id="nda" name="nda_ready" required>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </div>
+    </div>
+
+    <label for="existing_url">Existing listing URL <span class="hint">(optional)</span></label>
+    <input id="existing_url" name="existing_listing_url" type="url" placeholder="https://…">
+
+    <h3 style="margin-top:1.6rem">Broker contact — never published, relay only</h3>
+    <div class="row">
+      <div>
+        <label for="broker_name">Broker name</label>
+        <input id="broker_name" name="broker_name" required>
+      </div>
+      <div>
+        <label for="broker_firm">Brokerage / firm</label>
+        <input id="broker_firm" name="broker_firm" required>
+      </div>
+    </div>
+    <div class="row">
+      <div>
+        <label for="broker_email">Broker email</label>
+        <input id="broker_email" name="broker_email" type="email" required>
+      </div>
+      <div>
+        <label for="broker_phone">Broker phone</label>
+        <input id="broker_phone" name="broker_phone" type="tel" required>
+      </div>
+    </div>
+
+    <label style="font-weight:400;margin-top:1.2rem">
+      <input type="checkbox" name="consent_republish" value="yes" required style="width:auto">
+      I am the listing broker (or am authorized by them) and I consent to this listing being
+      published on the Bot-Friendly Business Index in human-readable and machine-readable form,
+      with contact handled by relay only.
+    </label>
+
+    <button type="submit">Submit listing for review</button>
+    <p class="hint">Submissions land with the index team for review before anything is published.
+    Questions: see <a href="../for-brokers/">For Brokers</a>.</p>
+  </form>
+  </section>
+</main>
+<footer class="site">
+  <div class="wrap">Bot-Friendly Business Index — one site, two doors, same truth.</div>
+</footer>
+</body>
+</html>
