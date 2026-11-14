@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AgentReady Listings — Businesses for sale, readable by people and their AI agents</title>
-<meta name="description" content="An index of businesses for sale published in two doors: human pages for buyers, and structured machine-readable records for their AI agents. Every listing follows the Agent-Readiness Standard — stated cash-flow basis, tax-return and NDA flags, freshness timestamps, badge tiers.">
+<title>AgentReady Listings — Businesses for sale, presented completely</title>
+<meta name="description" content="An index of businesses for sale published to a completeness standard: asking price, revenue, and cash flow with its basis stated, tax-return and NDA flags, and freshness dates on every listing — so complete listings surface first in modern buyer search.">
 <link rel="stylesheet" href="assets/style.css">
 <script type="application/ld+json">
 {
@@ -14,7 +14,7 @@
       "@type": "WebSite",
       "name": "AgentReady Listings",
       "url": "https://cronusworks.github.io/botfriendly-index/",
-      "description": "Businesses for sale, published for people and their AI agents under the Agent-Readiness Standard.",
+      "description": "Businesses for sale, published to the Agent-Readiness Standard: complete numbers, stated cash-flow basis, freshness dates.",
       "publisher": { "@type": "Organization", "name": "AgentReady Listings", "parentOrganization": { "@type": "Organization", "name": "Work & Money Los Angeles" } }
     },
     {
@@ -45,35 +45,35 @@
 </header>
 <main class="wrap">
   <div class="hero">
-    <h1>Businesses for sale — readable by people <em>and</em> their AI agents.</h1>
-    <p>Today's buyers don't shop alone. Their AI agents screen inventory first — and most listing
-    sites wall those agents out, bury the numbers in PDFs, or never state how the cash flow was
-    calculated. This index publishes every listing through two doors with the same truth behind
-    both: a clean page for people, and a structured record any agent can read, compare, and act on.</p>
+    <h1>Businesses for sale — presented completely, <em>and</em> kept current.</h1>
+    <p>Buyers find businesses differently than they did even a year ago. More of the screening
+    happens up front — listings get sorted and filtered before a buyer ever sees them, and the
+    ones that rise are the ones with complete, clearly presented numbers. Most listing sites bury
+    the numbers in PDFs or never state how the cash flow was calculated. This index publishes
+    every listing to a standard, with the same truth in both forms: a clean page for people, and
+    a complete, standardized record.</p>
     <a class="btn" href="listings/">Browse listings</a>
     <a class="btn ghost" href="for-brokers/">Brokers: list with us</a>
-    <p class="meta">Machine-readable doors: <a href="llms.txt">llms.txt</a> ·
-    <a href="listings.json">listings.json</a> · <a href="agents.json">agents.json</a> ·
-    <a href="standard/">Agent-Readiness Standard</a>. Freshness: published 2026-11-13,
+    <p class="meta">Published to the <a href="standard/">Agent-Readiness Standard</a>.
+    Freshness: published 2026-11-13,
     verified as of 2026-11-13, reviewed by 2026-12-13.</p>
   </div>
 
   <div class="sample-banner">Launch note: the index is in validation. The three listings below are
-  SAMPLE demonstrations of the format — clearly marked everywhere, including in the machine-readable
-  feed (<code>"sample": true</code>). They are not real businesses for sale. Real broker listings
+  SAMPLE demonstrations of the format — clearly marked everywhere they appear. They are not real businesses for sale. Real broker listings
   are being accepted now via the <a href="submit/">submission form</a>.</div>
 
   <h2>Current listings</h2>
   <div class="grid">
     <div class="card">
-      <span class="badge">Agent-Ready · SAMPLE</span>
+      <span class="badge">Top Tier · SAMPLE</span>
       <h3><a href="listings/laundromat-tulsa-ok/">Blue Ribbon Coin Laundry</a></h3>
       <div class="meta">Laundromat · Tulsa, OK · Est. 2008</div>
       <p class="price">$685,000</p>
       <div class="meta">Revenue $512,400 · SDE $187,300 (basis stated) · Tax returns available · NDA ready</div>
     </div>
     <div class="card">
-      <span class="badge">Agent-Ready · SAMPLE</span>
+      <span class="badge">Top Tier · SAMPLE</span>
       <h3><a href="listings/hvac-fort-worth-tx/">MetroFlow Heating &amp; Air</a></h3>
       <div class="meta">HVAC Contractor · Fort Worth, TX · Est. 2011</div>
       <p class="price">$1,600,000</p>
@@ -89,23 +89,22 @@
   </div>
 
   <section class="panel" style="margin-top:1.5rem">
-    <h2>How the two doors work</h2>
+    <h2>How the index works</h2>
     <p><strong>For people:</strong> browse, filter, and read listings with the numbers up front —
     asking price, revenue, cash flow <em>and how that cash flow figure was calculated</em>, plus
     whether tax returns are available and whether the broker is NDA-ready.</p>
-    <p><strong>For agents:</strong> the same facts live at <a href="listings.json">listings.json</a>,
-    in <a href="llms.txt">llms.txt</a> / <a href="llms-full.txt">llms-full.txt</a>, and as
-    schema.org JSON-LD on every page. Crawlers are explicitly welcomed in
-    <a href="robots.txt">robots.txt</a>. Every record carries published, verified-as-of, and
-    review-by dates, and contact is relay-only — agents get facts, brokers keep their privacy.</p>
-    <p><strong>For buyers:</strong> registered buyers publish agent-readable buy-box profiles.
+    <p><strong>For search:</strong> the same facts are published as a standardized record for
+    every listing — the format modern search and screening tools surface first. Every record
+    carries published, verified-as-of, and review-by dates, and contact is relay-only:
+    inquiries come through the index, and broker contact details are never published.</p>
+    <p><strong>For buyers:</strong> registered buyers publish standardized buy-box profiles.
     Buyer #1 is live — see the <a href="buyers/">Buyers</a> page.</p>
   </section>
 </main>
 <footer class="site">
   <div class="wrap">
-    AgentReady Listings — a Work &amp; Money Los Angeles project. One site, two doors, same truth.<br>
-    Agents: start at <a href="llms.txt">/llms.txt</a> or <a href="agents.json">/agents.json</a>. Humans: <a href="for-brokers/">list a business</a>.
+    AgentReady Listings — a Work &amp; Money Los Angeles project. Complete listings, current facts, one standard.<br>
+    Brokers: <a href="for-brokers/">list a business</a>. Buyers: <a href="buyers/">see who's buying</a>.
   </div>
 </footer>
 </body>

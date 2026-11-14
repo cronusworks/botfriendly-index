@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Listings — AgentReady Listings</title>
-<meta name="description" content="Browse businesses for sale in the AgentReady Listings. Filter by category, state, price, and cash flow. Every listing is also published as structured data for AI agents.">
+<meta name="description" content="Browse businesses for sale in the AgentReady Listings. Filter by category, state, price, and cash flow. Every listing is also published as a complete, standardized record.">
 <link rel="stylesheet" href="../assets/style.css">
 <script type="application/ld+json">
 {
@@ -12,7 +12,7 @@
   "@type": "CollectionPage",
   "name": "Business listings — AgentReady Listings",
   "url": "https://cronusworks.github.io/botfriendly-index/listings/",
-  "description": "All businesses for sale in the index. The machine-readable version of this page is ../listings.json.",
+  "description": "All businesses for sale in the index. The standardized data version of this page is ../listings.json.",
   "mainEntity": {
     "@type": "ItemList",
     "itemListElement": [
@@ -39,9 +39,8 @@
 </header>
 <main class="wrap">
   <h1>Businesses for sale</h1>
-  <p class="meta">Every listing here is also a structured record in
-  <a href="../listings.json">listings.json</a> — same facts, agent-readable. Sample listings are
-  marked SAMPLE in both doors. Published 2026-11-13 · verified as of 2026-11-13 · reviewed by 2026-12-13.</p>
+  <p class="meta">Every listing here is also published as a complete, standardized record — same facts, in
+  data form. Sample listings are marked SAMPLE in both forms. Published 2026-11-13 · verified as of 2026-11-13 · reviewed by 2026-12-13.</p>
 
   <div class="filters">
     <div><label for="f-cat">Category</label>
@@ -59,8 +58,8 @@
 </main>
 <footer class="site">
   <div class="wrap">
-    AgentReady Listings — one site, two doors, same truth.
-    Agents: <a href="../listings.json">listings.json</a> · <a href="../llms.txt">llms.txt</a>.
+    AgentReady Listings — complete listings, current facts, one standard.
+    Brokers: <a href="../for-brokers/">list a business</a>.
   </div>
 </footer>
 <script>
@@ -85,7 +84,7 @@ fetch("../listings.json").then(r => r.json()).then(data => {
     const box = document.getElementById("cards");
     box.innerHTML = shown.map(l => `
       <div class="card">
-        <span class="badge">${l.badge_tier.replace("-", " ")}${l.sample ? " · SAMPLE" : ""}</span>
+        <span class="badge">${({"listed":"Listed","verified":"Verified","agent-ready":"Top Tier"}[l.badge_tier] || l.badge_tier)}${l.sample ? " · SAMPLE" : ""}</span>
         <h3><a href="../listings/${l.id.replace("sample-", "")}/">${l.name.replace(" (SAMPLE)", "")}</a></h3>
         <div class="meta">${l.category} · ${l.city}, ${l.state} · Est. ${l.year_established}</div>
         <p class="price">${money(l.asking_price_usd)}</p>
