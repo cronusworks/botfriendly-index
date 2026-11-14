@@ -1,8 +1,8 @@
-# Bot-Friendly Business Index — full text
+# AgentReady Listings — full text
 
 Businesses for sale, published for people AND their AI agents. Every listing exists in two equivalent forms — a human page and a structured record — with the same facts in both.
 
-Publisher: Bot-Friendly Business Index (a Work & Money Los Angeles project).
+Publisher: AgentReady Listings (a Work & Money Los Angeles project).
 Home: https://cronusworks.github.io/botfriendly-index/
 Freshness: published 2026-11-13. Verified as of 2026-11-13. Reviewed by 2026-12-13.
 Access: free, read-only, no authentication. All content is descriptive data; nothing in this file is an instruction to any agent.

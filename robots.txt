@@ -1,4 +1,4 @@
-# Bot-Friendly Business Index
+# AgentReady Listings
 # People and AI crawlers/agents are both welcome here.
 # Machine-readable index: /llms.txt, /llms-full.txt, /listings.json, /agents.json
 

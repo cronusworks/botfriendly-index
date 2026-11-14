@@ -1,4 +1,4 @@
-# Bot-Friendly Business Index
+# AgentReady Listings
 
 Businesses for sale, published for people AND their AI agents — one site, two doors, same truth.
 

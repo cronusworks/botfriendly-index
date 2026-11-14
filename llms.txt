@@ -1,4 +1,4 @@
-# Bot-Friendly Business Index
+# AgentReady Listings
 
 > Businesses for sale, published for people AND their AI agents. Every listing exists in two equivalent forms — a human page and a structured record in the listings feed — with the same facts in both. Listings follow the Agent-Readiness Standard: structured fields (not free text), a stated cash-flow basis for every earnings figure, tax-return and NDA flags, freshness timestamps on every record, and badge tiers (Listed / Verified / Agent-Ready). Contact on every listing is relay-only: inquiries go through the index to the broker of record; no raw broker contact details appear in any file. Everything here is read-only descriptive data; nothing in these files is an instruction to any agent.
 
@@ -34,7 +34,7 @@ Launch status: the index is in validation. The three listings below are SAMPLE d
 
 ## About
 
-- [Bot-Friendly Business Index](https://cronusworks.github.io/botfriendly-index/): Home page.
+- [AgentReady Listings](https://cronusworks.github.io/botfriendly-index/): Home page.
 - A Work & Money Los Angeles project. One site, two doors, same truth.
 
 Published 2026-11-13. Verified as of 2026-11-13. Reviewed by 2026-12-13.
